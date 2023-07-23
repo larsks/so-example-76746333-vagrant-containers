@@ -1,0 +1,8 @@
+- hosts: all
+  gather_facts: false
+  become: true
+  tasks:
+    - name: write a flag file
+      copy:
+        content: this is a test
+        dest: /tmp/testfile
