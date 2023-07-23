@@ -1,9 +1,8 @@
-IMAGE_NAME = "rhel8-ssh"
 N = 3
 
 Vagrant.configure("2") do |config|
     config.vm.provider "docker" do |d|
-      d.image = IMAGE_NAME
+      d.build_dir = "rhel8-ssh"
       d.has_ssh = true
       d.remains_running = true
     end
